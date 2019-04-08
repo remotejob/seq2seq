@@ -7,7 +7,7 @@ MAX_LENGTH = 10
 MIN_COUNT = 3
 
 ## Get data
-data_manager = Seq2SeqDataManager.create_from_txt('data/tmp_sub.tsv','xx_ent_wiki_sm', 'xx_ent_wiki_sm', min_freq=MIN_COUNT, min_ntoks=MIN_LENGTH,
+data_manager = Seq2SeqDataManager.create_from_txt('data/tmp.tsv','xx_ent_wiki_sm', 'xx_ent_wiki_sm', min_freq=MIN_COUNT, min_ntoks=MIN_LENGTH,
                                                   max_ntoks=MAX_LENGTH, switch_pair=True)
 
 #data_manager.save('example_data_manager.pth')
