@@ -201,15 +201,15 @@ class Seq2seqLearner(nn.Module):
 
             print(f'Input: {input_sentence}')
             print(f'Target: {target_sentence}')
-            ax = sns.heatmap(df_attentions, cmap='Blues', robust=True, cbar=False, cbar_kws={"orientation": "horizontal"})
-            ax.xaxis.tick_top()  # x axis on top
-            ax.xaxis.set_label_position('top')
-            ax.set_xlabel('input')
-            ax.set_ylabel('output')
-            plt.yticks(rotation=0)
-            plt.tight_layout()
-            plt.show()
-            plt.close()
+            # ax = sns.heatmap(df_attentions, cmap='Blues', robust=True, cbar=False, cbar_kws={"orientation": "horizontal"})
+            # ax.xaxis.tick_top()  # x axis on top
+            # ax.xaxis.set_label_position('top')
+            # ax.set_xlabel('input')
+            # ax.set_ylabel('output')
+            # plt.yticks(rotation=0)
+            # plt.tight_layout()
+            # plt.show()
+            # plt.close()
 
 
     def predict(self, text:str, device:str='cpu'):

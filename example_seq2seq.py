@@ -7,16 +7,17 @@ MAX_LENGTH = 10
 MIN_COUNT = 3
 
 ## Get data
-data_manager = Seq2SeqDataManager.create_from_txt('data/eng-fra_sub.txt','en', 'fr', min_freq=MIN_COUNT, min_ntoks=MIN_LENGTH,
+data_manager = Seq2SeqDataManager.create_from_txt('data/tmp.tsv','xx_ent_wiki_sm', 'xx_ent_wiki_sm', min_freq=MIN_COUNT, min_ntoks=MIN_LENGTH,
                                                   max_ntoks=MAX_LENGTH, switch_pair=True)
 
 #data_manager.save('example_data_manager.pth')
 #data_manager=Seq2SeqDataManager.load('example_data_manager.pth')
 hidden_size=50
 learner=Seq2seqLearner(data_manager,hidden_size)
-learner.fit(20, show_attention_every=5)
+# learner.fit(20, show_attention_every=5)
+learner.fit(20)
 
-original_xtext = 'Je suis sûr.'
+original_xtext = 'soita mulle.'
 original_ytext = 'I am sure.'
 predicted_text = learner.predict(original_xtext, device=DEVICE)
 print(f'original text: {original_xtext}')
