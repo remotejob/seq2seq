@@ -1,7 +1,7 @@
 from seq2seq.data.data_manager import Seq2SeqDataManager
 from seq2seq.model.seq2seq_learner import Seq2seqLearner
 
-DEVICE = 'gpu'
+DEVICE = 'cuda'
 MIN_LENGTH = 3
 MAX_LENGTH = 10
 MIN_COUNT = 3
