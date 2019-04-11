@@ -15,7 +15,7 @@ data_manager = Seq2SeqDataManager.create_from_txt('data/tmp.tsv','en', 'en', min
 hidden_size=50
 learner=Seq2seqLearner(data_manager,hidden_size)
 # learner.fit(20, show_attention_every=5)
-learner.fit(200)
+learner.fit(300)
 
 original_xtext = 'mikä ala ?'
 original_ytext = 'rakennus . arvostan yritystä mutta'
